@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TCC Production – Total Celebration Company | Premium Wedding Photography & Cinematic Films</title>
+<meta name="description" content="TCC Production – Premium Indian Wedding Photography & Cinematic Videography. Capturing Moments. Creating Memories.">
+<meta name="keywords" content="wedding photography, Indian wedding, cinematic films, TCC Production, Total Celebration Company">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-pale: #F5E6C0;
+    --gold-dark: #8B6914;
+    --black: #0A0A0A;
+    --charcoal: #1A1A1A;
+    --dark: #111111;
+    --white: #FEFEFE;
+    --off-white: #F9F5EE;
+    --cream: #FAF6EF;
+    --gray: #6B6B6B;
+    --light-gray: #E8E2D9;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    background: var(--white);
+    color: var(--charcoal);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 400; }
+
+  /* ─── NAVBAR ─── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    padding: 18px 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    transition: all 0.4s ease;
+    background: transparent;
+  }
+  nav.scrolled {
+    background: rgba(10,10,10,0.96);
+    backdrop-filter: blur(12px);
+    padding: 12px 5%;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+  .nav-logo { display: flex; flex-direction: column; line-height: 1; }
+  .nav-logo .logo-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; font-weight: 600;
+    color: var(--gold-light);
+    letter-spacing: 2px;
+  }
+  .nav-logo .logo-sub {
+    font-size: 0.6rem; letter-spacing: 4px;
+    color: rgba(255,255,255,0.5);
+    text-transform: uppercase; font-weight: 300;
+  }
+  .nav-links { display: flex; gap: 2.5rem; list-style: none; align-items: center; }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase;
+    font-weight: 400;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px;
+    background: var(--gold); transition: width 0.3s;
+  }
+  .nav-links a:hover { color: var(--gold-light); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    background: transparent !important;
+    border: 1px solid var(--gold) !important;
+    color: var(--gold) !important;
+    padding: 8px 22px !important;
+    border-radius: 0 !important;
+    letter-spacing: 2px !important;
+  }
+  .nav-cta:hover { background: var(--gold) !important; color: var(--black) !important; }
+  .nav-cta::after { display: none !important; }
+
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { width: 26px; height: 1.5px; background: var(--white); transition: all 0.3s; display: block; }
+
+  .mobile-menu {
+    display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(10,10,10,0.98); z-index: 999;
+    flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', serif; font-size: 2rem;
+    color: var(--white); text-decoration: none; letter-spacing: 3px;
+    transition: color 0.3s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+  .mobile-close {
+    position: absolute; top: 25px; right: 5%; font-size: 1.8rem;
+    color: var(--white); cursor: pointer; background: none; border: none;
+  }
+
+  /* ─── HERO ─── */
+  #hero {
+    position: relative; height: 100vh; min-height: 650px;
+    display: flex; align-items: center; justify-content: center; text-align: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background: url('https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=1800&q=80') center/cover no-repeat;
+  }
+  .hero-bg::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.7) 100%);
+  }
+  .hero-content { position: relative; z-index: 2; max-width: 900px; padding: 0 2rem; }
+  .hero-badge {
+    display: inline-block;
+    font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--gold); border: 1px solid rgba(201,168,76,0.4);
+    padding: 7px 20px; margin-bottom: 2rem;
+    animation: fadeUp 1s ease both;
+  }
+  .hero-title {
+    font-size: clamp(2.8rem, 6vw, 5.5rem);
+    color: var(--white); line-height: 1.1;
+    font-weight: 300; font-style: italic;
+    margin-bottom: 1rem;
+    animation: fadeUp 1s ease 0.2s both;
+  }
+  .hero-title em { color: var(--gold-light); font-style: normal; }
+  .hero-sub {
+    font-size: clamp(0.85rem, 1.8vw, 1rem);
+    letter-spacing: 3px; text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2.8rem;
+    font-weight: 300;
+    animation: fadeUp 1s ease 0.4s both;
+  }
+  .hero-buttons { display: flex; gap: 1.2rem; justify-content: center; flex-wrap: wrap; animation: fadeUp 1s ease 0.6s both; }
+  .btn-primary {
+    background: var(--gold);
+    color: var(--black);
+    padding: 14px 38px;
+    text-decoration: none; font-size: 0.75rem;
+    letter-spacing: 3px; text-transform: uppercase; font-weight: 600;
+    border: 2px solid var(--gold);
+    transition: all 0.35s ease;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: transparent; color: var(--gold-light); transform: translateY(-2px); }
+  .btn-outline {
+    background: transparent;
+    color: var(--white);
+    padding: 14px 38px;
+    text-decoration: none; font-size: 0.75rem;
+    letter-spacing: 3px; text-transform: uppercase; font-weight: 400;
+    border: 1px solid rgba(255,255,255,0.5);
+    transition: all 0.35s ease;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: var(--gold); color: var(--gold); transform: translateY(-2px); }
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px;
+    animation: fadeUp 1s ease 1s both;
+  }
+  .hero-scroll span { font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase; color: rgba(255,255,255,0.5); }
+  .scroll-line { width: 1px; height: 50px; background: linear-gradient(to bottom, var(--gold), transparent); animation: scrollPulse 2s ease infinite; }
+
+  /* ─── SECTION COMMONS ─── */
+  section { padding: 100px 5%; }
+  .section-label {
+    font-size: 0.65rem; letter-spacing: 5px; text-transform: uppercase;
+    color: var(--gold); margin-bottom: 1rem; display: block;
+  }
+  .section-title {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.15; margin-bottom: 1.5rem;
+    font-weight: 400;
+  }
+  .gold-divider {
+    width: 60px; height: 1px; background: var(--gold);
+    margin: 0 auto 3rem;
+  }
+  .gold-divider.left { margin-left: 0; }
+
+  /* ─── ABOUT ─── */
+  #about { background: var(--off-white); }
+  .about-inner {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+    max-width: 1200px; margin: 0 auto;
+  }
+  .about-images { position: relative; height: 550px; }
+  .about-img-1 {
+    position: absolute; top: 0; left: 0; width: 72%; height: 75%;
+    object-fit: cover;
+    box-shadow: 20px 20px 60px rgba(0,0,0,0.15);
+  }
+  .about-img-2 {
+    position: absolute; bottom: 0; right: 0; width: 58%; height: 60%;
+    object-fit: cover;
+    box-shadow: -15px 15px 50px rgba(0,0,0,0.12);
+    border: 6px solid var(--white);
+  }
+  .about-gold-box {
+    position: absolute; bottom: 40px; left: 0;
+    background: var(--gold); color: var(--black);
+    padding: 18px 24px; text-align: center;
+    z-index: 3;
+  }
+  .about-gold-box strong { font-size: 1.8rem; font-family: 'Cormorant Garamond', serif; display: block; }
+  .about-gold-box span { font-size: 0.65rem; letter-spacing: 2px; text-transform: uppercase; }
+  .about-text p {
+    font-size: 1rem; color: var(--gray); line-height: 1.9;
+    margin-bottom: 1.5rem; font-weight: 300;
+  }
+  .about-stats {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.5rem;
+  }
+  .stat-item { border-left: 2px solid var(--gold); padding-left: 1.2rem; }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2.2rem; color: var(--gold-dark); display: block; }
+  .stat-label { font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); }
+
+  /* ─── PACKAGES ─── */
+  #packages { background: var(--dark); }
+  #packages .section-title { color: var(--white); text-align: center; }
+  #packages .section-label { text-align: center; }
+  .packages-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+    max-width: 1150px; margin: 0 auto;
+  }
+  .pkg-card {
+    padding: 3.5rem 2.5rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    position: relative; transition: all 0.4s ease;
+    background: rgba(255,255,255,0.02);
+  }
+  .pkg-card:hover { background: rgba(201,168,76,0.05); border-color: rgba(201,168,76,0.25); transform: translateY(-5px); }
+  .pkg-badge {
+    position: absolute; top: -14px; left: 50%; transform: translateX(-50%);
+    background: var(--gold); color: var(--black);
+    font-size: 0.6rem; letter-spacing: 3px; text-transform: uppercase;
+    padding: 6px 18px; font-weight: 600; white-space: nowrap;
+  }
+  .pkg-badge.luxury { background: linear-gradient(135deg, #C9A84C, #E8C97A); }
+  .pkg-icon { font-size: 1.5rem; margin-bottom: 1.2rem; }
+  .pkg-tier { font-size: 0.65rem; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 0.5rem; display: block; }
+  .pkg-name { font-size: 1.9rem; color: var(--white); margin-bottom: 0.8rem; }
+  .pkg-price { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; color: var(--gold-light); margin-bottom: 0.4rem; line-height: 1; }
+  .pkg-price-label { font-size: 0.7rem; letter-spacing: 2px; color: rgba(255,255,255,0.4); text-transform: uppercase; margin-bottom: 2rem; }
+  .pkg-divider { width: 40px; height: 1px; background: rgba(201,168,76,0.4); margin-bottom: 2rem; }
+  .pkg-features { list-style: none; margin-bottom: 2.5rem; }
+  .pkg-features li {
+    font-size: 0.88rem; color: rgba(255,255,255,0.7);
+    padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.05);
+    display: flex; align-items: center; gap: 12px; font-weight: 300;
+  }
+  .pkg-features li i { color: var(--gold); font-size: 0.7rem; flex-shrink: 0; }
+  .pkg-note { font-size: 0.75rem; color: rgba(255,255,255,0.35); font-style: italic; margin-bottom: 2rem; }
+  .pkg-btn {
+    display: block; text-align: center; padding: 13px;
+    border: 1px solid rgba(201,168,76,0.4); color: var(--gold);
+    text-decoration: none; font-size: 0.72rem; letter-spacing: 3px; text-transform: uppercase;
+    transition: all 0.35s;
+  }
+  .pkg-btn:hover { background: var(--gold); color: var(--black); }
+  .pkg-card.featured { background: rgba(201,168,76,0.06); border-color: rgba(201,168,76,0.3); }
+  .pkg-card.featured .pkg-btn { background: var(--gold); color: var(--black); }
+  .pkg-card.featured .pkg-btn:hover { background: var(--gold-light); }
+
+  /* ─── CUSTOM PACKAGE ─── */
+  #custom {
+    background: linear-gradient(135deg, var(--off-white) 0%, var(--cream) 100%);
+    text-align: center;
+  }
+  .custom-inner { max-width: 700px; margin: 0 auto; }
+  .custom-inner p { font-size: 1rem; color: var(--gray); line-height: 1.9; font-weight: 300; margin-bottom: 2.5rem; }
+  .custom-perks { display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap; margin-bottom: 3rem; }
+  .custom-perk { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .custom-perk i { font-size: 1.3rem; color: var(--gold); }
+  .custom-perk span { font-size: 0.72rem; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gray); }
+
+  /* ─── GALLERY ─── */
+  #gallery { background: var(--white); }
+  #gallery .section-title { text-align: center; }
+  .gallery-filter {
+    display: flex; gap: 0.8rem; justify-content: center; flex-wrap: wrap;
+    margin-bottom: 3rem;
+  }
+  .filter-btn {
+    font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase;
+    padding: 9px 22px; border: 1px solid var(--light-gray);
+    background: transparent; cursor: pointer; color: var(--gray);
+    transition: all 0.3s; font-family: 'Jost', sans-serif;
+  }
+  .filter-btn.active, .filter-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--black); }
+  .gallery-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px;
+    max-width: 1300px; margin: 0 auto;
+  }
+  .gallery-item {
+    position: relative; overflow: hidden; cursor: pointer;
+    aspect-ratio: 1;
+  }
+  .gallery-item:nth-child(5) { grid-column: span 2; aspect-ratio: 2/1; }
+  .gallery-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+  }
+  .gallery-item:hover img { transform: scale(1.08); }
+  .gallery-overlay {
+    position: absolute; inset: 0;
+    background: rgba(0,0,0,0); transition: background 0.4s;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .gallery-overlay i { color: var(--gold); font-size: 1.8rem; opacity: 0; transform: scale(0.7); transition: all 0.4s; }
+  .gallery-item:hover .gallery-overlay { background: rgba(0,0,0,0.45); }
+  .gallery-item:hover .gallery-overlay i { opacity: 1; transform: scale(1); }
+
+  /* Lightbox */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 2000;
+    background: rgba(0,0,0,0.95); align-items: center; justify-content: center;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 90vw; max-height: 90vh; object-fit: contain; }
+  .lightbox-close {
+    position: absolute; top: 20px; right: 25px; font-size: 2rem;
+    color: var(--white); cursor: pointer; background: none; border: none;
+    transition: color 0.3s;
+  }
+  .lightbox-close:hover { color: var(--gold); }
+  .lightbox-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.15);
+    color: var(--white); font-size: 1.5rem; padding: 15px 18px;
+    cursor: pointer; transition: all 0.3s;
+  }
+  .lightbox-arrow:hover { background: var(--gold); border-color: var(--gold); color: var(--black); }
+  .lightbox-arrow.prev { left: 20px; }
+  .lightbox-arrow.next { right: 20px; }
+
+  /* ─── VIDEO ─── */
+  #video { background: var(--charcoal); text-align: center; }
+  #video .section-title { color: var(--white); }
+  #video .section-label { }
+  .video-wrapper {
+    max-width: 900px; margin: 0 auto;
+    position: relative; aspect-ratio: 16/9;
+    border: 1px solid rgba(201,168,76,0.2);
+  }
+  .video-wrapper iframe { width: 100%; height: 100%; border: 0; }
+  .video-caption {
+    margin-top: 1.5rem; font-size: 0.8rem; letter-spacing: 2px;
+    text-transform: uppercase; color: rgba(255,255,255,0.4);
+  }
+
+  /* ─── WHY CHOOSE US ─── */
+  #why { background: var(--cream); }
+  .why-inner { max-width: 1200px; margin: 0 auto; }
+  .why-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 4rem; flex-wrap: wrap; gap: 2rem; }
+  .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; }
+  .why-card {
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--light-gray);
+    background: var(--white);
+    transition: all 0.35s ease;
+    position: relative; overflow: hidden;
+  }
+  .why-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+    background: var(--gold); transform: scaleX(0); transition: transform 0.4s; transform-origin: left;
+  }
+  .why-card:hover { box-shadow: 0 20px 50px rgba(0,0,0,0.08); transform: translateY(-4px); }
+  .why-card:hover::before { transform: scaleX(1); }
+  .why-icon {
+    width: 52px; height: 52px; border: 1px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+  }
+  .why-icon i { color: var(--gold); font-size: 1.2rem; }
+  .why-card h4 { font-size: 1.3rem; margin-bottom: 0.8rem; font-weight: 500; }
+  .why-card p { font-size: 0.88rem; color: var(--gray); line-height: 1.8; font-weight: 300; }
+
+  /* ─── TESTIMONIALS ─── */
+  #testimonials { background: var(--dark); text-align: center; }
+  #testimonials .section-title { color: var(--white); }
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; }
+  .testi-card { padding: 2.5rem; border: 1px solid rgba(255,255,255,0.07); text-align: left; background: rgba(255,255,255,0.02); transition: border-color 0.3s; }
+  .testi-card:hover { border-color: rgba(201,168,76,0.3); }
+  .testi-stars { color: var(--gold); margin-bottom: 1.2rem; font-size: 0.85rem; }
+  .testi-text { font-size: 0.92rem; color: rgba(255,255,255,0.65); line-height: 1.85; font-weight: 300; margin-bottom: 1.5rem; font-style: italic; }
+  .testi-author { font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gold); }
+  .testi-author span { color: rgba(255,255,255,0.3); font-weight: 300; letter-spacing: 1px; text-transform: none; display: block; margin-top: 3px; }
+
+  /* ─── CONTACT ─── */
+  #contact { background: var(--off-white); }
+  .contact-inner { display: grid; grid-template-columns: 1fr 1.4fr; gap: 6rem; max-width: 1200px; margin: 0 auto; align-items: start; }
+  .contact-info-items { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.8rem; }
+  .contact-item { display: flex; align-items: flex-start; gap: 1.2rem; }
+  .contact-ico {
+    width: 44px; height: 44px; border: 1px solid rgba(201,168,76,0.3);
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  .contact-ico i { color: var(--gold); font-size: 0.95rem; }
+  .contact-item-text label { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); display: block; margin-bottom: 4px; }
+  .contact-item-text p { font-size: 0.93rem; color: var(--charcoal); font-weight: 400; line-height: 1.6; }
+  .contact-item-text a { color: var(--charcoal); text-decoration: none; transition: color 0.3s; }
+  .contact-item-text a:hover { color: var(--gold-dark); }
+
+  .contact-form { display: grid; gap: 1.2rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-group label { font-size: 0.68rem; letter-spacing: 2px; text-transform: uppercase; color: var(--gray); }
+  .form-group input, .form-group textarea, .form-group select {
+    padding: 13px 16px; border: 1px solid var(--light-gray);
+    background: var(--white); font-family: 'Jost', sans-serif;
+    font-size: 0.9rem; color: var(--charcoal); outline: none;
+    transition: border-color 0.3s; border-radius: 0;
+    -webkit-appearance: none;
+  }
+  .form-group input:focus, .form-group textarea:focus, .form-group select:focus { border-color: var(--gold); }
+  .form-group textarea { resize: vertical; min-height: 120px; }
+  .btn-submit {
+    background: var(--gold); color: var(--black);
+    border: none; padding: 15px 40px;
+    font-family: 'Jost', sans-serif; font-size: 0.75rem;
+    letter-spacing: 3px; text-transform: uppercase; font-weight: 600;
+    cursor: pointer; transition: all 0.35s; width: 100%;
+  }
+  .btn-submit:hover { background: var(--gold-dark); color: var(--white); }
+
+  /* ─── FOOTER ─── */
+  footer { background: var(--black); padding: 60px 5% 30px; }
+  .footer-inner {
+    max-width: 1200px; margin: 0 auto;
+    display: grid; grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 4rem; padding-bottom: 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .footer-brand .logo-main { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; color: var(--gold-light); letter-spacing: 2px; display: block; margin-bottom: 5px; }
+  .footer-brand .logo-sub { font-size: 0.6rem; letter-spacing: 4px; color: rgba(255,255,255,0.4); text-transform: uppercase; display: block; margin-bottom: 1.2rem; }
+  .footer-brand p { font-size: 0.87rem; color: rgba(255,255,255,0.45); line-height: 1.8; font-weight: 300; font-style: italic; margin-bottom: 1.5rem; }
+  .social-links { display: flex; gap: 12px; }
+  .social-link {
+    width: 38px; height: 38px; border: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    color: rgba(255,255,255,0.5); text-decoration: none;
+    transition: all 0.3s; font-size: 0.9rem;
+  }
+  .social-link:hover { border-color: var(--gold); color: var(--gold); }
+  .footer-col h5 { font-family: 'Cormorant Garamond', serif; font-size: 1.1rem; color: var(--white); margin-bottom: 1.5rem; font-weight: 400; letter-spacing: 1px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.8rem; }
+  .footer-col ul li a { font-size: 0.83rem; color: rgba(255,255,255,0.45); text-decoration: none; letter-spacing: 1px; transition: color 0.3s; font-weight: 300; }
+  .footer-col ul li a:hover { color: var(--gold); }
+  .footer-bottom { max-width: 1200px; margin: 0 auto; padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-bottom p { font-size: 0.75rem; color: rgba(255,255,255,0.3); letter-spacing: 1px; }
+  .footer-bottom .gold-text { color: var(--gold); }
+
+  /* ─── WHATSAPP FLOAT ─── */
+  .whatsapp-float {
+    position: fixed; bottom: 30px; right: 30px; z-index: 999;
+    width: 58px; height: 58px;
+    background: #25D366; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.5rem; color: var(--white); text-decoration: none;
+    box-shadow: 0 6px 25px rgba(37,211,102,0.4);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: whatsappPulse 3s ease infinite;
+  }
+  .whatsapp-float:hover { transform: scale(1.1); box-shadow: 0 10px 35px rgba(37,211,102,0.55); }
+  .whatsapp-tooltip {
+    position: absolute; right: 70px; background: var(--charcoal);
+    color: var(--white); font-size: 0.75rem; letter-spacing: 1px;
+    padding: 8px 14px; white-space: nowrap;
+    opacity: 0; pointer-events: none; transition: opacity 0.3s;
+  }
+  .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes scrollPulse {
+    0%, 100% { transform: scaleY(1); opacity: 1; }
+    50% { transform: scaleY(0.6); opacity: 0.5; }
+  }
+  @keyframes whatsappPulse {
+    0%, 100% { box-shadow: 0 6px 25px rgba(37,211,102,0.4); }
+    50% { box-shadow: 0 6px 40px rgba(37,211,102,0.65); }
+  }
+
+  .reveal {
+    opacity: 0; transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 1024px) {
+    .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .about-images { height: 380px; }
+    .packages-grid { grid-template-columns: 1fr; max-width: 480px; }
+    .why-grid { grid-template-columns: repeat(2, 1fr); }
+    .testi-grid { grid-template-columns: 1fr 1fr; }
+    .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+    .footer-inner { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 768px) {
+    nav { padding: 16px 5%; }
+    .nav-links { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 70px 5%; }
+    .about-images { height: 300px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+    .gallery-item:nth-child(5) { grid-column: span 2; }
+    .why-grid { grid-template-columns: 1fr 1fr; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+    .footer-bottom { flex-direction: column; text-align: center; }
+  }
+  @media (max-width: 480px) {
+    .hero-buttons { flex-direction: column; align-items: center; }
+    .gallery-grid { grid-template-columns: 1fr; }
+    .gallery-item:nth-child(5) { grid-column: span 1; aspect-ratio: 1; }
+    .why-grid { grid-template-columns: 1fr; }
+    .about-images { height: 250px; }
+    .about-img-1 { width: 80%; }
+    .about-img-2 { width: 65%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav id="navbar">
+  <div class="nav-logo">
+    <span class="logo-main">TCC Production</span>
+    <span class="logo-sub">Total Celebration Company</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#video">Films</a></li>
+    <li><a href="#contact" class="nav-cta">Book Now</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" onclick="toggleMenu()">&#x2715;</button>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#packages" onclick="toggleMenu()">Packages</a>
+  <a href="#gallery" onclick="toggleMenu()">Gallery</a>
+  <a href="#video" onclick="toggleMenu()">Films</a>
+  <a href="#why" onclick="toggleMenu()">Why Us</a>
+  <a href="#contact" onclick="toggleMenu()">Book Now</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <span class="hero-badge">✦ Premium Wedding Photography & Films ✦</span>
+    <h1 class="hero-title">
+      Capturing Moments.<br><em>Creating Memories.</em>
+    </h1>
+    <p class="hero-sub">Premium Wedding Photography &amp; Cinematic Films</p>
+    <div class="hero-buttons">
+      <a href="#packages" class="btn-primary">View Packages</a>
+      <a href="#contact" class="btn-outline">Book Now</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-images reveal">
+      <img class="about-img-1" src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=800&q=80" alt="Indian wedding photography">
+      <img class="about-img-2" src="https://images.unsplash.com/photo-1619532550766-12c525d012bc?w=600&q=80" alt="Wedding couple portrait">
+      <div class="about-gold-box">
+        <strong>500+</strong>
+        <span>Weddings Captured</span>
+      </div>
+    </div>
+    <div class="about-text">
+      <span class="section-label">✦ About Us</span>
+      <h2 class="section-title">We Tell Your Love<br><em>Story Through Lens</em></h2>
+      <div class="gold-divider left"></div>
+      <p>At TCC Production, we are a passionate team of wedding photographers and videographers who believe every love story deserves to be told beautifully. We specialize in capturing real emotions, candid moments, and creating cinematic wedding films that transport you back to every heartbeat of your celebration.</p>
+      <p>Our approach is grounded in quality, creativity, and storytelling. We don't just take photographs — we craft visual narratives that reflect the depth of your emotions and the beauty of your traditions. From the intimate rituals of Mehndi to the grandeur of your Reception, we are there for every precious moment.</p>
+      <p>Our goal is simple: to turn your celebration into lifetime memories that your family treasures for generations.</p>
+      <div class="about-stats reveal reveal-delay-2">
+        <div class="stat-item">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Weddings Covered</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">8+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">98%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">50+</span>
+          <span class="stat-label">Awards & Reviews</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section id="packages">
+  <span class="section-label" style="text-align:center;display:block;">✦ Our Offerings</span>
+  <h2 class="section-title" style="text-align:center;color:var(--white);">Choose Your Perfect Package</h2>
+  <div class="gold-divider" style="margin-bottom:4rem;"></div>
+  <div class="packages-grid reveal">
+    <!-- Silver -->
+    <div class="pkg-card">
+      <span class="pkg-icon">🥈</span>
+      <span class="pkg-tier">Silver Package</span>
+      <h3 class="pkg-name">Silver</h3>
+      <div class="pkg-price">₹85,000</div>
+      <div class="pkg-price-label">All-Inclusive</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li><i class="fas fa-check"></i> Professional Photography</li>
+        <li><i class="fas fa-check"></i> Cinematic Videography</li>
+        <li><i class="fas fa-check"></i> High-Quality Premium Album</li>
+        <li><i class="fas fa-check"></i> All Edited Photos on Online Drive</li>
+        <li><i class="fas fa-check"></i> Full Wedding Day Coverage</li>
+      </ul>
+      <p class="pkg-note">"Elegant coverage for your special day."</p>
+      <a href="#contact" class="pkg-btn">Book Silver</a>
+    </div>
+    <!-- Gold -->
+    <div class="pkg-card featured">
+      <div class="pkg-badge">✦ Most Popular</div>
+      <span class="pkg-icon">🥇</span>
+      <span class="pkg-tier">Gold Package</span>
+      <h3 class="pkg-name">Gold</h3>
+      <div class="pkg-price">₹1,35,000</div>
+      <div class="pkg-price-label">Best Value</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li><i class="fas fa-check"></i> Everything in Silver</li>
+        <li><i class="fas fa-check"></i> Drone Shoot (Reception – 1 Day)</li>
+        <li><i class="fas fa-check"></i> Extended Event Coverage</li>
+        <li><i class="fas fa-check"></i> Creative Couple Portraits</li>
+        <li><i class="fas fa-check"></i> Special Complimentary Add-Ons</li>
+      </ul>
+      <p class="pkg-note">"The perfect blend of elegance and value."</p>
+      <a href="#contact" class="pkg-btn">Book Gold</a>
+    </div>
+    <!-- Platinum -->
+    <div class="pkg-card">
+      <div class="pkg-badge luxury">👑 Luxury Experience</div>
+      <span class="pkg-icon">💎</span>
+      <span class="pkg-tier">Platinum Package</span>
+      <h3 class="pkg-name">Platinum</h3>
+      <div class="pkg-price">₹1,95,000</div>
+      <div class="pkg-price-label">Ultimate Experience</div>
+      <div class="pkg-divider"></div>
+      <ul class="pkg-features">
+        <li><i class="fas fa-check"></i> Everything in Gold</li>
+        <li><i class="fas fa-check"></i> Drone Shoot (Haldi, Mehndi & Reception)</li>
+        <li><i class="fas fa-check"></i> FREE Pre-Wedding Shoot</li>
+        <li><i class="fas fa-check"></i> Instagram Reels Edits</li>
+        <li><i class="fas fa-check"></i> LED Wall Coverage</li>
+        <li><i class="fas fa-check"></i> Instant QR Code to View Photos</li>
+        <li><i class="fas fa-check"></i> Priority Premium Cinematic Film</li>
+      </ul>
+      <p class="pkg-note">"A complete luxury wedding film experience."</p>
+      <a href="#contact" class="pkg-btn">Book Platinum</a>
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM PACKAGE -->
+<section id="custom">
+  <div class="custom-inner reveal">
+    <span class="section-label" style="text-align:center;display:block;">✦ Tailored For You</span>
+    <h2 class="section-title" style="text-align:center;">Customize Your Dream<br><em>Wedding Package</em></h2>
+    <div class="gold-divider"></div>
+    <p>Create your own plan tailored to your unique celebration. We offer complete flexibility with uncompromising premium quality service. Every wedding is different — and your coverage should be too. Limited discounts are available as we focus on delivering the absolute best experience for each couple.</p>
+    <div class="custom-perks">
+      <div class="custom-perk"><i class="fas fa-sliders-h"></i><span>Fully Flexible</span></div>
+      <div class="custom-perk"><i class="fas fa-star"></i><span>Premium Quality</span></div>
+      <div class="custom-perk"><i class="fas fa-heart"></i><span>Personalized Plan</span></div>
+      <div class="custom-perk"><i class="fas fa-tag"></i><span>Special Pricing</span></div>
+    </div>
+    <a href="#contact" class="btn-primary">Request Custom Quote</a>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <span class="section-label" style="text-align:center;display:block;">✦ Portfolio</span>
+  <h2 class="section-title" style="text-align:center;">Our Gallery</h2>
+  <div class="gold-divider"></div>
+  <div class="gallery-filter">
+    <button class="filter-btn active" onclick="filterGallery('all', this)">All</button>
+    <button class="filter-btn" onclick="filterGallery('wedding', this)">Wedding</button>
+    <button class="filter-btn" onclick="filterGallery('pre-wedding', this)">Pre-Wedding</button>
+    <button class="filter-btn" onclick="filterGallery('haldi', this)">Haldi</button>
+    <button class="filter-btn" onclick="filterGallery('mehndi', this)">Mehndi</button>
+    <button class="filter-btn" onclick="filterGallery('reception', this)">Reception</button>
+    <button class="filter-btn" onclick="filterGallery('drone', this)">Drone Shots</button>
+  </div>
+  <div class="gallery-grid" id="galleryGrid">
+    <div class="gallery-item" data-category="wedding" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1583939003579-730e3918a45a?w=600&q=80" alt="Indian Wedding">
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+    <div class="gallery-item" data-category="pre-wedding" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1591604466107-ec97de577aff?w=600&q=80" alt="Pre-Wedding Shoot">
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+    <div class="gallery-item" data-category="reception" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1587271407850-8d438ca9fdf2?w=600&q=80" alt="Reception">
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+    <div class="gallery-item" data-category="wedding" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1619532550766-12c525d012bc?w=600&q=80" alt="Wedding Couple">
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+    <div class="gallery-item" data-category="drone" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1200&q=80" alt="Aerial Wedding Shot">
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+    <div class="gallery-item" data-category="mehndi" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1596040033229-a9821ebd058d?w=600&q=80" alt="Mehndi Ceremony">
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+    <div class="gallery-item" data-category="haldi" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1518335935020-cfd6580c1ab4?w=600&q=80" alt="Haldi Ceremony">
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+    <div class="gallery-item" data-category="pre-wedding" onclick="openLightbox(this)">
+      <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=600&q=80" alt="Couple Pre-Wedding">
+      <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section id="video">
+  <span class="section-label" style="text-align:center;display:block;">✦ Cinematic Films</span>
+  <h2 class="section-title" style="text-align:center;color:var(--white);margin-bottom:1rem;">Experience Our Craft</h2>
+  <div class="gold-divider"></div>
+  <div class="video-wrapper reveal">
+    <iframe src="https://www.youtube.com/embed/YJEf_2SCNAQ?rel=0&modestbranding=1" title="TCC Production – Cinematic Wedding Film" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+  </div>
+  <p class="video-caption">✦ Every frame tells a story ✦</p>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="why-inner">
+    <div class="why-header">
+      <div>
+        <span class="section-label">✦ Why TCC Production</span>
+        <h2 class="section-title">Trusted by Hundreds<br><em>of Happy Couples</em></h2>
+      </div>
+      <a href="#contact" class="btn-primary" style="white-space:nowrap;">Book Your Date</a>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal reveal-delay-1">
+        <div class="why-icon"><i class="fas fa-camera"></i></div>
+        <h4>Experienced Creative Team</h4>
+        <p>Our team of skilled photographers and cinematographers bring years of expertise and an artistic eye to every wedding we document.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-2">
+        <div class="why-icon"><i class="fas fa-drone"></i></div>
+        <h4>High-End Equipment & Drone</h4>
+        <p>We invest in the latest professional cameras, lenses, and drone technology to deliver stunning aerial and ground-level footage.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-3">
+        <div class="why-icon"><i class="fas fa-film"></i></div>
+        <h4>Fast Delivery & Premium Editing</h4>
+        <p>We understand how eager you are to relive your memories. Our expert editors deliver color-graded, cinematic films with precision.</p>
+      </div>
+      <div class="why-card reveal reveal-delay-4">
+        <div class="why-icon"><i class="fas fa-heart"></i></div>
+        <h4>Trusted by Happy Couples</h4>
+        <p>With 500+ weddings covered and a 98% satisfaction rate, our couples trust us to capture the most important day of their lives.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <span class="section-label" style="text-align:center;display:block;">✦ Client Stories</span>
+  <h2 class="section-title" style="text-align:center;color:var(--white);margin-bottom:1rem;">What Our Couples Say</h2>
+  <div class="gold-divider"></div>
+  <div class="testi-grid reveal">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"TCC Production captured every emotion of our wedding beautifully. The cinematic film made us relive our big day all over again. Truly professional and passionate team!"</p>
+      <div class="testi-author">Priya & Arjun Sharma
+        <span>Delhi Wedding, 2024</span>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"We opted for the Platinum package and it was absolutely worth every penny. The drone shots of our reception were breathtaking. Our album is a masterpiece!"</p>
+      <div class="testi-author">Neha & Rahul Gupta
+        <span>Dehradun Wedding, 2024</span>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <p class="testi-text">"From our Mehndi to Reception, TCC Production was incredible. The candid shots tell our story so beautifully. Highly recommend for any couple who wants the best!"</p>
+      <div class="testi-author">Kavya & Vikram Singh
+        <span>Haridwar Wedding, 2023</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-inner">
+    <div class="contact-info reveal">
+      <span class="section-label">✦ Get in Touch</span>
+      <h2 class="section-title">Let's Create Your<br><em>Dream Wedding Story</em></h2>
+      <div class="gold-divider left"></div>
+      <div class="contact-info-items">
+        <div class="contact-item">
+          <div class="contact-ico"><i class="fas fa-phone"></i></div>
+          <div class="contact-item-text">
+            <label>Call Us</label>
+            <p><a href="tel:9897081221">+91 98970 81221</a><br><a href="tel:7017743901">+91 70177 43901</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico"><i class="fas fa-envelope"></i></div>
+          <div class="contact-item-text">
+            <label>Email Us</label>
+            <p><a href="mailto:totalcelebrationco@gmail.com">totalcelebrationco@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico"><i class="fas fa-map-marker-alt"></i></div>
+          <div class="contact-item-text">
+            <label>Serving</label>
+            <p>Delhi NCR, Dehradun, Haridwar &amp; Across India</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-ico"><i class="fab fa-whatsapp"></i></div>
+          <div class="contact-item-text">
+            <label>WhatsApp</label>
+            <p><a href="https://wa.me/919897081221" target="_blank">Chat With Us on WhatsApp</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="contact-form reveal reveal-delay-2">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Your Name *</label>
+          <input type="text" placeholder="Full Name">
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" placeholder="+91 XXXXX XXXXX">
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Email Address</label>
+        <input type="email" placeholder="your@email.com">
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Event Date</label>
+          <input type="date">
+        </div>
+        <div class="form-group">
+          <label>Package Interest</label>
+          <select>
+            <option value="" disabled selected>Select a Package</option>
+            <option>Silver – ₹85,000</option>
+            <option>Gold – ₹1,35,000</option>
+            <option>Platinum – ₹1,95,000</option>
+            <option>Custom Package</option>
+          </select>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Your Message</label>
+        <textarea placeholder="Tell us about your wedding — venue, events, special requirements…"></textarea>
+      </div>
+      <button class="btn-submit" onclick="handleSubmit(event)">Send Enquiry ✦</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <span class="logo-main">TCC Production</span>
+      <span class="logo-sub">Total Celebration Company</span>
+      <p>"Your Wedding. Our Creativity.<br>Lifetime Memories."</p>
+      <div class="social-links">
+        <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#video">Cinematic Films</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Our Services</h5>
+      <ul>
+        <li><a href="#">Wedding Photography</a></li>
+        <li><a href="#">Cinematic Videography</a></li>
+        <li><a href="#">Pre-Wedding Shoots</a></li>
+        <li><a href="#">Drone Photography</a></li>
+        <li><a href="#">Instagram Reels</a></li>
+        <li><a href="#">Premium Albums</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 <span class="gold-text">TCC Production – Total Celebration Company.</span> All Rights Reserved.</p>
+    <p style="color:rgba(255,255,255,0.2);font-size:0.7rem;">Capturing Moments. Creating Memories.</p>
+  </div>
+</footer>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/919897081221" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+  <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+</a>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+  <button class="lightbox-arrow prev" onclick="changeLightbox(-1)">&#8592;</button>
+  <img id="lightboxImg" src="" alt="Gallery Image">
+  <button class="lightbox-arrow next" onclick="changeLightbox(1)">&#8594;</button>
+</div>
+
+<script>
+  // Navbar scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.1 });
+  reveals.forEach(r => observer.observe(r));
+
+  // Gallery filter
+  function filterGallery(cat, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const show = cat === 'all' || item.dataset.category === cat;
+      item.style.display = show ? 'block' : 'none';
+    });
+  }
+
+  // Lightbox
+  let lightboxImages = [];
+  let currentIdx = 0;
+
+  function openLightbox(item) {
+    const img = item.querySelector('img');
+    lightboxImages = Array.from(document.querySelectorAll('.gallery-item:not([style*="none"]) img'));
+    currentIdx = lightboxImages.indexOf(img);
+    document.getElementById('lightboxImg').src = lightboxImages[currentIdx].src;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function changeLightbox(dir) {
+    currentIdx = (currentIdx + dir + lightboxImages.length) % lightboxImages.length;
+    document.getElementById('lightboxImg').src = lightboxImages[currentIdx].src;
+  }
+
+  document.getElementById('lightbox').addEventListener('click', function(e) {
+    if (e.target === this) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') changeLightbox(-1);
+    if (e.key === 'ArrowRight') changeLightbox(1);
+  });
+
+  // Form submit
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn = document.querySelector('.btn-submit');
+    btn.textContent = '✓ Enquiry Sent! We will contact you soon.';
+    btn.style.background = '#2d7a2d';
+    btn.style.color = '#fff';
+    setTimeout(() => {
+      btn.textContent = 'Send Enquiry ✦';
+      btn.style.background = '';
+      btn.style.color = '';
+    }, 4000);
+  }
+</script>
+</body>
+</html>
